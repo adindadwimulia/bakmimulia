@@ -1,0 +1,50 @@
+{
+  "menu": [
+    {
+      "id": 1,
+      "name": "Bakmi Ayam Spesial",
+      "description": "Mie kenyal dengan potongan ayam empuk, jamur, dan bawang goreng.",
+      "price": "Rp 35.000",
+      "image": "https://images.unsplash.com/photo-1569718212165-3a8278bd77f0?w=500&q=80"
+    },
+    {
+      "id": 2,
+      "name": "Bakmi Goreng Mulia",
+      "description": "Bakmi goreng pedas manis dengan telur, sayur, dan ayam suwir.",
+      "price": "Rp 32.000",
+      "image": "https://images.unsplash.com/photo-1612929632978-da6daba39f4b?w=500&q=80"
+    },
+    {
+      "id": 3,
+      "name": "Bakmi Kuah Original",
+      "description": "Kuah kaldu ayam kaya rasa dengan mie segar dan topping klasik.",
+      "price": "Rp 30.000",
+      "image": "https://images.unsplash.com/photo-1585032226651-759b368d7246?w=500&q=80"
+    },
+    {
+      "id": 4,
+      "name": "Bakmi Seafood",
+      "description": "Kombinasi udang, cumi, dan bakso ikan dalam kuah gurih.",
+      "price": "Rp 45.000",
+      "image": "https://images.unsplash.com/photo-1555126634-323283e090fa?w=500&q=80"
+    }
+  ],
+  "videos": [
+    {
+      "id": "L5hVYbKSj7I",
+      "title": "Bakmi Mulia - Keistimewaan Cita Rasa"
+    },
+    {
+      "id": "PVwEmFXPW10",
+      "title": "Proses Pembuatan Bakmi Segar"
+    },
+    {
+      "id": "RzdgVue_9a0",
+      "title": "Review Bakmi Mulia Spesial"
+    },
+    {
+      "id": "r5tExZdrgyE",
+      "title": "Suasana & Hidangan Bakmi Mulia"
+    }
+  ]
+}
