@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Forum diskusi Bakmi Mulia — tanya jawab seputar HTML, CSS, JS, dan JSON.">
+  <title>Forum Diskusi — Bakmi Mulia</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a href="index.html" class="logo">
+        <div class="logo-icon">🍜</div>
+        Bakmi Mulia
+      </a>
+      <nav class="nav-links">
+        <a href="index.html">Beranda</a>
+        <a href="materi.html">Materi</a>
+        <a href="diskusi.html" class="active">Diskusi</a>
+        <a href="showcase.html">Showcase</a>
+        <a href="about.html">Tentang</a>
+        <a href="materi.html" class="nav-cta">Mulai Belajar</a>
+      </nav>
+      <button class="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <section class="page-header">
+    <div class="container">
+      <h1>Forum <span class="gold-text">Diskusi</span></h1>
+      <p>Tempat tanya jawab santai seputar desain web. Saling bantu, saling belajar.</p>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top: 0;">
+    <div class="container">
+      <div style="display: grid; grid-template-columns: 1fr 340px; gap: 2rem; align-items: start;">
+        
+        <!-- List diskusi -->
+        <div>
+          <div class="search-box" style="max-width: 100%; margin-bottom: 1.5rem;">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+            </svg>
+            <input type="text" id="search-input" placeholder="Cari topik diskusi...">
+          </div>
+          <div class="diskusi-list" id="diskusi-list">
+            <!-- Loaded by JS -->
+          </div>
+        </div>
+
+        <!-- Form buat diskusi baru -->
+        <aside>
+          <div class="feature-card" style="position: sticky; top: 90px;">
+            <h3 style="margin-bottom: 1rem;">Buat Diskusi Baru</h3>
+            <p class="muted" style="font-size: 0.9rem; margin-bottom: 1.25rem;">
+              Punya pertanyaan atau mau share insight? Tulis di sini (simulasi — data sementara).
+            </p>
+            <form id="diskusi-form">
+              <div class="form-group">
+                <label for="title">Judul</label>
+                <input type="text" id="title" name="title" placeholder="Contoh: Tips CSS Grid responsive" required>
+              </div>
+              <div class="form-group">
+                <label for="content">Isi Diskusi</label>
+                <textarea id="content" name="content" placeholder="Ceritakan pertanyaan atau insight kamu..." required></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center;">
+                Posting Diskusi
+              </button>
+            </form>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">
+            <div class="logo-icon">🍜</div>
+            Bakmi Mulia
+          </a>
+          <p>Portal belajar & diskusi desain web. HTML, CSS, JS, JSON — semua dibahas bareng.</p>
+        </div>
+        <div>
+          <h4>Belajar</h4>
+          <ul>
+            <li><a href="materi.html">Semua Materi</a></li>
+            <li><a href="materi.html">HTML</a></li>
+            <li><a href="materi.html">CSS</a></li>
+            <li><a href="materi.html">JavaScript</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Komunitas</h4>
+          <ul>
+            <li><a href="diskusi.html">Forum Diskusi</a></li>
+            <li><a href="showcase.html">Showcase</a></li>
+            <li><a href="about.html">Tentang Kami</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Deploy</h4>
+          <ul>
+            <li><a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a></li>
+            <li><a href="https://docs.github.com/en/pages" target="_blank" rel="noopener">Dokumentasi</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Bakmi Mulia. Dibuat dengan ❤️ untuk pembelajar web.</span>
+        <span>Deploy-ready · Static · Open</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+  <style>
+    @media (max-width: 900px) {
+      section .container > div[style] {
+        grid-template-columns: 1fr !important;
+      }
+    }
+  </style>
+</body>
+</html>

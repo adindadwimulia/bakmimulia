@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Detail Materi — Bakmi Mulia</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a href="index.html" class="logo">
+        <div class="logo-icon">🍜</div>
+        Bakmi Mulia
+      </a>
+      <nav class="nav-links">
+        <a href="index.html">Beranda</a>
+        <a href="materi.html" class="active">Materi</a>
+        <a href="diskusi.html">Diskusi</a>
+        <a href="showcase.html">Showcase</a>
+        <a href="about.html">Tentang</a>
+        <a href="materi.html" class="nav-cta">Mulai Belajar</a>
+      </nav>
+      <button class="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <section class="section" style="padding-top: 7rem;">
+    <div class="container">
+      <div class="lesson-layout">
+        
+        <aside class="lesson-sidebar">
+          <h4>Navigasi</h4>
+          <nav class="lesson-nav" id="lesson-nav">
+            <a href="materi.html">← Kembali ke Materi</a>
+          </nav>
+        </aside>
+
+        <article class="lesson-content" id="lesson-content">
+          <p class="muted">Memuat materi...</p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom" style="border: none; padding-top: 0;">
+        <span>© 2026 Bakmi Mulia</span>
+        <span>Deploy-ready · Static · Open</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+  <script>
+    // Load specific lesson based on ?id=
+    (async function() {
+      const params = new URLSearchParams(window.location.search);
+      const id = params.get('id') || 'html-dasar';
+      const contentEl = document.getElementById('lesson-content');
+      const navEl = document.getElementById('lesson-nav');
+
+      try {
+        const res = await fetch('data/lessons.json');
+        const lessons = await res.json();
+        const lesson = lessons.find(l => l.id === id) || lessons[0];
+
+        // Sidebar nav
+        navEl.innerHTML = `
+          <a href="materi.html">← Kembali ke Materi</a>
+          ${lessons.map(l => `
+            <a href="materi-detail.html?id=${l.id}" class="${l.id === lesson.id ? 'active' : ''}">${l.title}</a>
+          `).join('')}
+        `;
+
+        // Content (sample content based on category)
+        const sampleContent = getSampleContent(lesson);
+
+        contentEl.innerHTML = `
+          <span class="materi-tag">${lesson.category} · ${lesson.level} · ${lesson.duration}</span>
+          <h2 style="margin-top: 1rem;">${lesson.title}</h2>
+          <p>${lesson.description}</p>
+          <h3 style="margin: 2rem 0 1rem; color: var(--gold);">Topik yang dibahas</h3>
+          <ul style="color: var(--text-muted); margin-bottom: 2rem; padding-left: 1.25rem; line-height: 2;">
+            ${lesson.topics.map(t => `<li>${t}</li>`).join('')}
+          </ul>
+          ${sampleContent}
+          <div style="margin-top: 2.5rem; padding-top: 1.5rem; border-top: 1px solid var(--border);">
+            <a href="materi.html" class="btn btn-outline">← Kembali ke Daftar Materi</a>
+            <a href="diskusi.html" class="btn btn-primary" style="margin-left: 0.75rem;">Diskusikan Materi Ini</a>
+          </div>
+        `;
+
+        document.title = `${lesson.title} — Bakmi Mulia`;
+      } catch (err) {
+        contentEl.innerHTML = '<p class="muted">Gagal memuat materi. Pastikan file data/lessons.json tersedia.</p>';
+      }
+    })();
+
+    function getSampleContent(lesson) {
+      const samples = {
+        HTML: `
+          <h3 style="margin: 1.5rem 0 1rem; color: var(--gold);">Contoh Kode</h3>
+          <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="id"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;Halaman Pertamaku&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;header&gt;
+    &lt;h1&gt;Halo, Bakmi Mulia!&lt;/h1&gt;
+  &lt;/header&gt;
+  &lt;main&gt;
+    &lt;p&gt;Ini adalah struktur dasar HTML.&lt;/p&gt;
+  &lt;/main&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+          <p class="muted">Tips: selalu gunakan elemen semantik (<code>&lt;header&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;footer&gt;</code>) agar struktur lebih jelas dan accessible.</p>
+        `,
+        CSS: `
+          <h3 style="margin: 1.5rem 0 1rem; color: var(--gold);">Contoh Kode</h3>
+          <pre><code>.container {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.card {
+  flex: 1 1 280px;
+  background: #1a1a1a;
+  border: 1px solid rgba(201, 168, 76, 0.15);
+  border-radius: 12px;
+  padding: 1.5rem;
+}
+
+/* CSS Grid alternatif */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+}</code></pre>
+          <p class="muted">Gunakan <code>gap</code> daripada margin manual. Flexbox cocok untuk komponen, Grid cocok untuk layout halaman.</p>
+        `,
+        JavaScript: `
+          <h3 style="margin: 1.5rem 0 1rem; color: var(--gold);">Contoh Kode</h3>
+          <pre><code>// Ambil elemen
+const btn = document.querySelector('#btn-submit');
+const list = document.querySelector('#item-list');
+
+// Event listener
+btn.addEventListener('click', () => {
+  const item = document.createElement('li');
+  item.textContent = 'Item baru';
+  item.classList.add('fade-in');
+  list.appendChild(item);
+});
+
+// Fetch data JSON
+async function loadData() {
+  const res = await fetch('data/lessons.json');
+  const data = await res.json();
+  console.log(data);
+}</code></pre>
+          <p class="muted">Selalu prefer <code>querySelector</code> dan <code>addEventListener</code>. Hindari inline <code>onclick</code> di HTML modern.</p>
+        `,
+        JSON: `
+          <h3 style="margin: 1.5rem 0 1rem; color: var(--gold);">Contoh Kode</h3>
+          <pre><code>// data/lessons.json
+[
+  {
+    "id": "html-dasar",
+    "title": "HTML Dasar",
+    "category": "HTML",
+    "level": "Pemula"
+  }
+]
+
+// Ambil & tampilkan
+fetch('data/lessons.json')
+  .then(res => res.json())
+  .then(data => {
+    data.forEach(item => {
+      console.log(item.title);
+    });
+  });
+
+// Atau dengan async/await
+const res = await fetch('data/lessons.json');
+const lessons = await res.json();</code></pre>
+          <p class="muted">Di GitHub Pages, pastikan path relatif benar. File JSON harus berada di repo yang sama.</p>
+        `,
+        Deploy: `
+          <h3 style="margin: 1.5rem 0 1rem; color: var(--gold);">Langkah Deploy</h3>
+          <ol style="color: var(--text-muted); line-height: 2; padding-left: 1.25rem;">
+            <li>Buat repo baru di GitHub</li>
+            <li>Push semua file project (HTML, CSS, JS, data/)</li>
+            <li>Buka <strong style="color:var(--text)">Settings → Pages</strong></li>
+            <li>Pilih branch <code>main</code> sebagai source</li>
+            <li>Tunggu 1–2 menit → website live!</li>
+          </ol>
+          <pre><code># Contoh perintah git
+git init
+git add .
+git commit -m "Initial commit - Bakmi Mulia"
+git branch -M main
+git remote add origin https://github.com/USERNAME/bakmi-mulia.git
+git push -u origin main</code></pre>
+        `
+      };
+      return samples[lesson.category] || samples.HTML;
+    }
+  </script>
+</body>
+</html>

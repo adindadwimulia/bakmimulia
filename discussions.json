@@ -1,0 +1,68 @@
+[
+  {
+    "id": 1,
+    "title": "Kenapa Flexbox lebih enak daripada float?",
+    "author": "Rina K.",
+    "avatar": "RK",
+    "excerpt": "Aku baru coba Flexbox dan langsung jatuh cinta. Ada yang punya tips layout kompleks pakai Flexbox?",
+    "category": "CSS",
+    "replies": 12,
+    "views": 89,
+    "time": "2 jam lalu"
+  },
+  {
+    "id": 2,
+    "title": "Cara terbaik load JSON di GitHub Pages?",
+    "author": "Budi S.",
+    "avatar": "BS",
+    "excerpt": "Fetch ke file JSON lokal kadang kena CORS. Ada workaround yang rapi tanpa backend?",
+    "category": "JSON",
+    "replies": 8,
+    "views": 64,
+    "time": "5 jam lalu"
+  },
+  {
+    "id": 3,
+    "title": "Dark mode pure CSS vs JS toggle?",
+    "author": "Dewi A.",
+    "avatar": "DA",
+    "excerpt": "Mau bikin toggle dark/light mode. Lebih bagus pure CSS (prefers-color-scheme) atau pakai class + JS?",
+    "category": "CSS",
+    "replies": 15,
+    "views": 112,
+    "time": "1 hari lalu"
+  },
+  {
+    "id": 4,
+    "title": "Struktur folder project HTML/CSS/JS yang rapi",
+    "author": "Andi P.",
+    "avatar": "AP",
+    "excerpt": "Bagaimana struktur folder yang recommended untuk project kecil sampai menengah sebelum pakai framework?",
+    "category": "HTML",
+    "replies": 6,
+    "views": 47,
+    "time": "1 hari lalu"
+  },
+  {
+    "id": 5,
+    "title": "Animasi CSS yang performant di mobile",
+    "author": "Siti M.",
+    "avatar": "SM",
+    "excerpt": "Transform dan opacity saja yang aman, atau ada tips lain biar animasi tetap smooth di HP low-end?",
+    "category": "CSS",
+    "replies": 9,
+    "views": 73,
+    "time": "2 hari lalu"
+  },
+  {
+    "id": 6,
+    "title": "Error fetch JSON setelah deploy ke GitHub Pages",
+    "author": "Fajar R.",
+    "avatar": "FR",
+    "excerpt": "Di local jalan, setelah deploy fetch malah 404. Path relative-nya salah kah?",
+    "category": "Deploy",
+    "replies": 11,
+    "views": 95,
+    "time": "3 hari lalu"
+  }
+]

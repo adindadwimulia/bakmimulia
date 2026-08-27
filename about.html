@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Tentang Bakmi Mulia — portal belajar dan diskusi desain web.">
+  <title>Tentang — Bakmi Mulia</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a href="index.html" class="logo">
+        <div class="logo-icon">🍜</div>
+        Bakmi Mulia
+      </a>
+      <nav class="nav-links">
+        <a href="index.html">Beranda</a>
+        <a href="materi.html">Materi</a>
+        <a href="diskusi.html">Diskusi</a>
+        <a href="showcase.html">Showcase</a>
+        <a href="about.html" class="active">Tentang</a>
+        <a href="materi.html" class="nav-cta">Mulai Belajar</a>
+      </nav>
+      <button class="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <section class="page-header">
+    <div class="container">
+      <h1>Tentang <span class="gold-text">Bakmi Mulia</span></h1>
+      <p>Portal belajar dan berdiskusi tentang dunia desain web.</p>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top: 0;">
+    <div class="container" style="max-width: 720px;">
+      
+      <div class="feature-card" style="margin-bottom: 2rem;">
+        <h2 style="margin-bottom: 1rem;">Apa itu Bakmi Mulia?</h2>
+        <p class="muted" style="margin-bottom: 1rem;">
+          <strong class="gold-text">Bakmi Mulia</strong> adalah portal belajar dan komunitas diskusi seputar desain web. 
+          Nama ini terinspirasi dari bakmi — makanan yang sederhana tapi bisa dinikmati bareng-bareng — 
+          dan "mulia" yang berarti bermartabat. Kami percaya belajar coding juga bisa santai, menyenangkan, dan saling menguatkan.
+        </p>
+        <p class="muted">
+          Fokus kami: <strong>HTML, CSS, JavaScript, dan JSON</strong> — fondasi yang wajib dikuasai sebelum masuk ke framework. 
+          Ditambah praktik deploy ke <strong>GitHub Pages</strong> biar project kamu langsung live.
+        </p>
+      </div>
+
+      <div class="feature-card" style="margin-bottom: 2rem;">
+        <h2 style="margin-bottom: 1rem;">Fitur Portal</h2>
+        <ul style="color: var(--text-muted); line-height: 2;">
+          <li>✅ <strong style="color: var(--text);">Materi terstruktur</strong> — HTML, CSS, JS, JSON, dan Deploy</li>
+          <li>✅ <strong style="color: var(--text);">Forum diskusi</strong> — tanya jawab santai antar pembelajar</li>
+          <li>✅ <strong style="color: var(--text);">Showcase karya</strong> — inspirasi dari project komunitas</li>
+          <li>✅ <strong style="color: var(--text);">Konten berbasis JSON</strong> — praktik real cara load data di static site</li>
+          <li>✅ <strong style="color: var(--text);">Siap deploy GitHub Pages</strong> — tinggal push, langsung live</li>
+          <li>✅ <strong style="color: var(--text);">Desain modern minimalis</strong> — dark theme dengan brand burgundy & gold</li>
+        </ul>
+      </div>
+
+      <div class="feature-card" style="margin-bottom: 2rem;">
+        <h2 style="margin-bottom: 1rem;">Tech Stack</h2>
+        <p class="muted" style="margin-bottom: 1rem;">
+          Website ini dibangun pure static — tanpa framework, tanpa backend. Cocok banget buat belajar fondasi:
+        </p>
+        <div style="display: flex; flex-wrap: wrap; gap: 0.75rem;">
+          <span class="materi-tag">HTML5</span>
+          <span class="materi-tag">CSS3</span>
+          <span class="materi-tag">Vanilla JavaScript</span>
+          <span class="materi-tag">JSON</span>
+          <span class="materi-tag">GitHub Pages</span>
+        </div>
+      </div>
+
+      <div class="feature-card">
+        <h2 style="margin-bottom: 1rem;">Cara Deploy ke GitHub Pages</h2>
+        <ol style="color: var(--text-muted); line-height: 2; padding-left: 1.25rem;">
+          <li>Buat repository baru di GitHub (misal: <code>bakmi-mulia</code>)</li>
+          <li>Upload semua file project ini ke repo tersebut</li>
+          <li>Buka <strong style="color: var(--text);">Settings → Pages</strong></li>
+          <li>Pilih branch <code>main</code> (atau <code>master</code>) sebagai source</li>
+          <li>Klik Save — website kamu live di <code>https://username.github.io/bakmi-mulia/</code></li>
+        </ol>
+        <p class="muted mt-2" style="font-size: 0.9rem;">
+          Tip: pastikan path di HTML/CSS/JS menggunakan relative path (sudah disiapkan di project ini).
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="section cta-section">
+    <div class="container">
+      <h2>Yuk Belajar Bareng!</h2>
+      <p>Mulai dari materi, ikut diskusi, atau deploy project pertama kamu hari ini.</p>
+      <div class="hero-actions" style="justify-content: center;">
+        <a href="materi.html" class="btn btn-primary">Lihat Materi</a>
+        <a href="diskusi.html" class="btn btn-outline">Masuk Forum</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">
+            <div class="logo-icon">🍜</div>
+            Bakmi Mulia
+          </a>
+          <p>Portal belajar & diskusi desain web. HTML, CSS, JS, JSON — semua dibahas bareng.</p>
+        </div>
+        <div>
+          <h4>Belajar</h4>
+          <ul>
+            <li><a href="materi.html">Semua Materi</a></li>
+            <li><a href="materi.html">HTML</a></li>
+            <li><a href="materi.html">CSS</a></li>
+            <li><a href="materi.html">JavaScript</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Komunitas</h4>
+          <ul>
+            <li><a href="diskusi.html">Forum Diskusi</a></li>
+            <li><a href="showcase.html">Showcase</a></li>
+            <li><a href="about.html">Tentang Kami</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Deploy</h4>
+          <ul>
+            <li><a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a></li>
+            <li><a href="https://docs.github.com/en/pages" target="_blank" rel="noopener">Dokumentasi</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Bakmi Mulia. Dibuat dengan ❤️ untuk pembelajar web.</span>
+        <span>Deploy-ready · Static · Open</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,90 @@
+[
+  {
+    "id": "html-dasar",
+    "title": "HTML Dasar: Struktur Dokumen",
+    "category": "HTML",
+    "level": "Pemula",
+    "duration": "25 menit",
+    "icon": "📄",
+    "description": "Pelajari fondasi HTML: doctype, head, body, elemen semantik, dan cara membangun struktur halaman yang rapi.",
+    "image": "https://images.unsplash.com/photo-1627398242454-45a1465c2479?w=600&q=80",
+    "topics": ["Doctype & Meta", "Heading & Paragraph", "Link & Image", "Semantic HTML5"]
+  },
+  {
+    "id": "css-layout",
+    "title": "CSS Layout: Flexbox & Grid",
+    "category": "CSS",
+    "level": "Pemula",
+    "duration": "40 menit",
+    "icon": "🎨",
+    "description": "Kuasai Flexbox dan CSS Grid untuk membuat layout modern yang responsif tanpa pusing float lagi.",
+    "image": "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?w=600&q=80",
+    "topics": ["Flexbox Basics", "CSS Grid", "Responsive Design", "Media Queries"]
+  },
+  {
+    "id": "js-dom",
+    "title": "JavaScript DOM Manipulation",
+    "category": "JavaScript",
+    "level": "Menengah",
+    "duration": "35 menit",
+    "icon": "⚡",
+    "description": "Manipulasi elemen HTML dengan JavaScript: querySelector, event listener, dan update konten secara dinamis.",
+    "image": "https://images.unsplash.com/photo-1579468118864-1b9ea3c0b9fd?w=600&q=80",
+    "topics": ["querySelector", "Event Handling", "Create & Remove Element", "ClassList"]
+  },
+  {
+    "id": "json-api",
+    "title": "Bekerja dengan JSON & Fetch API",
+    "category": "JSON",
+    "level": "Menengah",
+    "duration": "30 menit",
+    "icon": "📦",
+    "description": "Pahami format JSON, cara parse & stringify, serta fetch data dari API atau file lokal.",
+    "image": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=600&q=80",
+    "topics": ["JSON Syntax", "JSON.parse & stringify", "Fetch API", "Async/Await"]
+  },
+  {
+    "id": "github-pages",
+    "title": "Deploy ke GitHub Pages",
+    "category": "Deploy",
+    "level": "Pemula",
+    "duration": "20 menit",
+    "icon": "🚀",
+    "description": "Langkah demi langkah deploy website statis ke GitHub Pages secara gratis dan profesional.",
+    "image": "https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?w=600&q=80",
+    "topics": ["Git Basics", "GitHub Repo", "GitHub Pages Setting", "Custom Domain"]
+  },
+  {
+    "id": "css-modern",
+    "title": "CSS Modern: Variables & Animasi",
+    "category": "CSS",
+    "level": "Menengah",
+    "duration": "35 menit",
+    "icon": "✨",
+    "description": "Gunakan CSS Custom Properties, transition, dan keyframe animation untuk desain yang hidup.",
+    "image": "https://images.unsplash.com/photo-1558655146-d09347e92766?w=600&q=80",
+    "topics": ["CSS Variables", "Transitions", "Keyframe Animation", "Transform"]
+  },
+  {
+    "id": "js-es6",
+    "title": "JavaScript ES6+ Modern",
+    "category": "JavaScript",
+    "level": "Menengah",
+    "duration": "45 menit",
+    "icon": "🔥",
+    "description": "Arrow function, destructuring, spread operator, modules, dan fitur ES6+ yang wajib dikuasai.",
+    "image": "https://images.unsplash.com/photo-1516116216624-53e697fedbea?w=600&q=80",
+    "topics": ["Arrow Function", "Destructuring", "Modules", "Template Literals"]
+  },
+  {
+    "id": "html-form",
+    "title": "HTML Form & Validasi",
+    "category": "HTML",
+    "level": "Pemula",
+    "duration": "30 menit",
+    "icon": "📝",
+    "description": "Buat form yang user-friendly lengkap dengan validasi native HTML5 dan aksesibilitas.",
+    "image": "https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=600&q=80",
+    "topics": ["Input Types", "Form Validation", "Label & Accessibility", "Fieldset"]
+  }
+]
